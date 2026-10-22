@@ -1,4 +1,5 @@
 package com.pluralsight;
+import java.util.*;
 
 public class Vehicle {
 
@@ -16,12 +17,28 @@ public class Vehicle {
         this.price = price;
     }
 
+    // Print all vehicles from array
     public static void listAllVehicles(int vehicleCount, Vehicle[] vehicleList) {
         for (int i = 0; i < vehicleCount; i++) {
             System.out.println(vehicleList[i].getMakeModel());
             
         }
     }
+    public static void findVehiclesByMakeModel(Vehicle[] vehicleList, int vehicleCount, Scanner scanner) {
+        System.out.println("==Find Vehicle by Make and Model==");
+        boolean vehicleFound = false;
+        System.out.println("Enter make and model: ");
+        String inputMakeModel = scanner.nextLine();
+        for (int i = 0; i < vehicleCount; i++) {
+            if (inputMakeModel.equals(vehicleList[i].getMakeModel())) {
+                System.out.printf("Yes we have a %s for $%,.2f", vehicleList[i].getMakeModel(), vehicleList[i].getPrice());
+                vehicleFound = true;
+            }
+        }
+        if (vehicleFound == false) {
+            System.out.println("Sorry, that car is unavailable :(");
+        }
+        }
 
     public long getVehicleId() {
         return vehicleId;

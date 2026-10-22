@@ -30,8 +30,12 @@ public class VehicleMenu {
         System.out.println("Enter your command: ");
 
         int command = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println();
 
-        Vehicle.listAllVehicles(vehicleCount, vehicleList);
+//        Vehicle.listAllVehicles(vehicleCount, vehicleList);
+
+        Vehicle.findVehiclesByMakeModel(vehicleList, vehicleCount, scanner);
 
     }
 }
