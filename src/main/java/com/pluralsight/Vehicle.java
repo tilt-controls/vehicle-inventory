@@ -16,6 +16,13 @@ public class Vehicle {
         this.price = price;
     }
 
+    public static void listAllVehicles(int vehicleCount, Vehicle[] vehicleList) {
+        for (int i = 0; i < vehicleCount; i++) {
+            System.out.println(vehicleList[i].getMakeModel());
+            
+        }
+    }
+
     public long getVehicleId() {
         return vehicleId;
     }
