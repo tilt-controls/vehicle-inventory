@@ -3,6 +3,7 @@
   <component name="DoNotAskProjectManager">
     <option name="idToDisplayName">
       <map>
+        <entry key="vcs.commit.checks.failed" value="Commit and push checks failed" />
         <entry key="vcs.post.commit.checks.failed" value="Commit contains problems" />
       </map>
     </option>

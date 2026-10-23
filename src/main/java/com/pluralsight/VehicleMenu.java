@@ -33,9 +33,14 @@ public class VehicleMenu {
         scanner.nextLine();
         System.out.println();
 
-        Vehicle.listAllVehicles(vehicleList);
+        switch(command) {
+            case 1:
+                Vehicle.listAllVehicles(vehicleList);
+                break;
+            case 2:
+                Vehicle.findVehiclesByMakeModel(vehicleList, vehicleCount, scanner);
+        }
 
-//        Vehicle.findVehiclesByMakeModel(vehicleList, vehicleCount, scanner);
 
     }
 }
