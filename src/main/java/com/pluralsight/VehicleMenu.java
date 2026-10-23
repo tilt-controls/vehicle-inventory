@@ -33,9 +33,10 @@ public class VehicleMenu {
         scanner.nextLine();
         System.out.println();
 
+
 //        Vehicle.listAllVehicles(vehicleCount, vehicleList);
 
-        Vehicle.findVehiclesByMakeModel(vehicleList, vehicleCount, scanner);
+//        Vehicle.findVehiclesByMakeModel(vehicleList, vehicleCount, scanner);
 
     }
 }

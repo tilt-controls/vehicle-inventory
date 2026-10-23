@@ -17,6 +17,18 @@ public class Vehicle {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return """
+            ==Vehicle==
+        - Vehicle ID: %d
+        - Make and Model: %s
+        - Color: %s
+        - Odometer Reading: %d
+        - Price: %s
+        """.formatted(vehicleId, makeModel, color, odometerReading, price);
+    }
+
     // Print all vehicles from array
     public static void listAllVehicles(int vehicleCount, Vehicle[] vehicleList) {
         for (int i = 0; i < vehicleCount; i++) {
