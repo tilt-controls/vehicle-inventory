@@ -39,6 +39,13 @@ public class VehicleMenu {
                 break;
             case 2:
                 Vehicle.findVehiclesByMakeModel(vehicleList, vehicleCount, scanner);
+                break;
+            case 3:
+                Vehicle.findVehicleByPrice(vehicleList, scanner);
+                break;
+            case 4:
+                Vehicle.findVehiclesByColor(vehicleList, scanner);
+                break;
         }
 
 

@@ -37,6 +37,7 @@ public class Vehicle {
             }
         }
     }
+
     public static void findVehiclesByMakeModel(Vehicle[] vehicleList, int vehicleCount, Scanner scanner) {
         System.out.println("==Find Vehicle by Make and Model==");
         boolean vehicleFound = false;
@@ -52,6 +53,50 @@ public class Vehicle {
             System.out.println("Sorry, that car is unavailable :(");
         }
         }
+
+    public static void findVehicleByPrice(Vehicle[] vehicleList, Scanner scanner){
+        double minPrice;
+        double maxPrice;
+        boolean vehicleFound = false;
+
+        System.out.println("==Find Vehicle by Price==");
+        System.out.println("Enter min price: ");
+        minPrice = scanner.nextDouble();
+        System.out.println();
+
+        System.out.println("Enter max price: ");
+        maxPrice = scanner.nextDouble();
+        System.out.println();
+
+        for (Vehicle currentVehicle: vehicleList) {
+            if (currentVehicle != null) {
+            if (currentVehicle.getPrice() <= maxPrice && currentVehicle.getPrice() >= minPrice) {
+                System.out.println(currentVehicle);
+                vehicleFound = true;
+            }}
+        } if (vehicleFound == false) {
+            System.out.println("Sorry, no vehicles found :(");
+        }
+    }
+
+    public static void findVehiclesByColor(Vehicle[] vehicleList, Scanner scanner) {
+        boolean vehicleFound = false;
+        System.out.println("==Find Vehicle by Color==");
+        System.out.println("Enter color: ");
+        String inputColor = scanner.nextLine();
+        System.out.println();
+
+        for (Vehicle currentVehicle: vehicleList) {
+            if (currentVehicle != null) {
+            if (inputColor.equals(currentVehicle.getColor())) {
+                System.out.println("Car found!");
+                System.out.println(currentVehicle);
+                vehicleFound = true;
+            } }
+        } if (vehicleFound == false) {
+            System.out.println("Sorry, no car found");
+        }
+    }
 
     public long getVehicleId() {
         return vehicleId;
