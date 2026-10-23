@@ -30,10 +30,11 @@ public class Vehicle {
     }
 
     // Print all vehicles from array
-    public static void listAllVehicles(int vehicleCount, Vehicle[] vehicleList) {
-        for (int i = 0; i < vehicleCount; i++) {
-            System.out.println(vehicleList[i].getMakeModel());
-            
+    public static void listAllVehicles(Vehicle[] vehicleList) {
+        for (Vehicle currentVehicle: vehicleList) {
+            if (currentVehicle != null) {
+                System.out.println(currentVehicle);
+            }
         }
     }
     public static void findVehiclesByMakeModel(Vehicle[] vehicleList, int vehicleCount, Scanner scanner) {
