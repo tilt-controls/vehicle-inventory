@@ -33,6 +33,9 @@ public class VehicleMenu {
         scanner.nextLine();
         System.out.println();
 
+        for (int i = 0; i < vehicleCount; i++) {
+            System.out.println(vehicleList[i]);
+        }
 
 //        Vehicle.listAllVehicles(vehicleCount, vehicleList);
 
